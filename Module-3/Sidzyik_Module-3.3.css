@@ -1,0 +1,76 @@
+/*
+Color Pallette (Green/Orange)
+#006400 Dark Green
+#ffa500 Mid Orange
+#320064 Split Purple
+#003264 Square Blue
+#643200 Square Brown
+#f5f5f5 Neutral
+*/
+
+html {
+font-size: 16px;
+background-color: #f5f5f5;
+}
+
+body {
+font-family: arial;
+}
+
+div.container {
+padding-top: 50px;
+padding-left: 100px;
+padding-right: 100px;
+}
+
+h1 {
+font-weight: 700;
+text-align: center;
+background-color: #643200;
+color: #ffa500;
+border-style: solid;
+border-width: 1px;
+border-color: #D6A800;
+}
+
+h2 {
+text-align: center;
+background-color: #643200;
+color: #ffa500;
+border-style: solid;
+border-width: 1px;
+border-color: #D6A800;
+}
+
+h3 {
+background-color: #643200;
+color: #ffa500;
+border-style: solid;
+border-width: 1px;
+border-color: #D6A800;
+}
+
+h4 {
+background-color: #643200;
+color: #ffa500;
+border-style: solid;
+border-width: 1px;
+border-color: #D6A800;
+}
+
+a {
+color: #003264;
+font-family: helvetica;
+line-height: 1.25em;
+font-weight: bold;
+text-decoration: none;
+}
+
+a:hover {
+color: #ffa500;
+}
+
+a:visited {
+font-weight: 400;
+color: #320064;
+}
