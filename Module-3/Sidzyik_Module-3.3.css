@@ -17,45 +17,65 @@ body {
 font-family: arial;
 }
 
-div.container {
-padding-top: 50px;
-padding-left: 100px;
-padding-right: 100px;
+.Container {
+width: 100%;
+}
+
+.Row{
+display: flex;
+gap: 5%
+}
+
+.LeftContainer {
+width: 45%;
+border-style: solid;
+border-width: 1px;
+border-radius: 15px;
+border-color: #D6A800;
+}
+
+.RightContainer {
+width: 45%;
+border-style: dashed;
+border-width: 1px;
+border-radius: 15px;
+border-color: #D6A800;
+}
+
+.Bottom {
+width: 100%;
+text-align: right;
 }
 
 h1 {
-font-weight: 700;
 text-align: center;
 background-color: #643200;
 color: #ffa500;
-border-style: solid;
-border-width: 1px;
-border-color: #D6A800;
 }
 
 h2 {
-text-align: center;
+font-weight: 500;
 background-color: #643200;
 color: #ffa500;
-border-style: solid;
-border-width: 1px;
-border-color: #D6A800;
 }
 
-h3 {
-background-color: #643200;
-color: #ffa500;
-border-style: solid;
-border-width: 1px;
-border-color: #D6A800;
+ol {
+font-weight: 300;
 }
 
-h4 {
-background-color: #643200;
-color: #ffa500;
-border-style: solid;
-border-width: 1px;
-border-color: #D6A800;
+ul {
+font-weight: 300;
+padding: 10px;
+list-style: none;
+}
+
+ul li {
+counter-increment: roman;
+}
+
+ul li::before {
+content: counter(roman, upper-roman) ". ";
+text-align: right;
 }
 
 a {
@@ -74,3 +94,8 @@ a:visited {
 font-weight: 400;
 color: #320064;
 }
+
+/*
+Add :hover to the links and show the underlines when a cursor hovers over the links
+Give the bottom div a css value of float right and a margin-bottom of 20px
+*/
