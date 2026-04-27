@@ -17,6 +17,14 @@ body {
 font-family: arial;
 }
 
+.Navbar {
+width: 100%;
+}
+
+.Navbar:hover {
+color: #ffa500;
+}
+
 .Container {
 width: 100%;
 }
@@ -65,6 +73,5 @@ color: #320064;
 }
 
 /*
-Add :hover to the links and show the underlines when a cursor hovers over the links
-Give the bottom div a css value of float right and a margin-bottom of 20px
+
 */
