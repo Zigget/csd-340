@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment 10.3: Build a Web Page - Part 6</title>
+    <link rel="stylesheet" href="Sidzyik_Module-10.3.css">
+    <meta name="description"
+	content="Module 10.3">
+    <meta name="keywords"
+	content="website,beginner,HTML,CSS">
+    <meta name="author"
+	content="Sam Sidzyik">
+</head>
+
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById("myImage");
+            var caption = document.getElementById("imageName");
+
+
+            if (image.src.match("Ace")) {
+                image.src = "back.jpg";
+                caption.innerHTML = "Deck";
+            } else {
+                image.src = "Ace.png";
+                caption.innerHTML = "Ace";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Pick a card</h1>
+
+<div class="card">
+
+<h2>Guess the card</h2>
+
+<img id="myImage" src="back.jpg" onclick="changeImage()" alt="Card">
+<h3 id="imageName" class="caption">Ace</h3>
+
+</div>
+<div class="footer">
+<p>Copyright 2026 - Sidzyik</p>
+        <p><a href="../../index.html">back to Landing Page</a></p>
+</div>
+
+</body>
+</html>
