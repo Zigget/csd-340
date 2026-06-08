@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Sidzyik_Module-11.2.css">
+    <meta name="description"
+	content="Module 11.2">
+    <meta name="keywords"
+	content="website,beginner,HTML,CSS">
+    <meta name="author"
+	content="Sam Sidzyik">
+</head>
+
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <input type="text" id="todoInput" placeholder="Enter a task">
+    <br>
+
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLast()">Delete Last Entry</button>
+    <button onclick="sortList()">Sort</button>
+
+    <div id="todoDisplay"></div>
+
+    <script>
+        let todoList = [];
+        
+        function displayList() {
+            let output = "<h3>Things To Do:</h3><ul>";
+            for (let item of todoList) {
+                output += "<li>" + item + "</li>";
+            }
+            output += "</ul>";
+            document.getElementById("todoDisplay").innerHTML = output;
+        }
+
+        function addItem() {
+            let item = document.getElementById("todoInput").value;
+
+            if (item.trim() === "") {
+                alert("Please enter a valid item.");
+                return;
+            }
+
+            todoList.push(item);
+            alert("Added: " + item);
+
+            displayList();
+            document.getElementById("todoInput").value = "";
+        }
+
+        function deleteLast() {
+            if (todoList.length === 0) {
+                alert("There is nothing to delete.");
+                return;
+            }
+
+            let removed = todoList.pop();
+            alert("Deleted: " + removed);
+
+            displayList();
+        }
+
+        function sortList() {
+            if (todoList.length === 0) {
+                alert("Nothing to sort.");
+                return;
+            }
+
+            todoList.sort();
+            alert("The list has been sorted.");
+
+            displayList();
+        }
+    </script>
+
+</body>
+</html>
